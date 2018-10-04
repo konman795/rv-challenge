@@ -58,6 +58,52 @@ a {
           justify-content: space-between;
 }
 
+.justify-content-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.custom-checkbox {
+  position: relative;
+  padding-left: 1.8rem;
+  display: inline-block;
+}
+
+.custom-checkbox__input {
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox__label {
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.custom-checkbox__label:before {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0.2rem;
+  margin-right: 1rem;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 4px;
+  width: 1rem;
+  height: 1rem;
+  -webkit-transition: all 0.05s;
+  transition: all 0.05s;
+}
+
+.custom-checkbox__input:checked ~ .custom-checkbox__label:before {
+  width: 1rem;
+  height: 1rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border: 6px solid #216DDF;
+}
+
 .btn {
   font-weight: bold;
   font-size: 1rem;
@@ -81,7 +127,7 @@ a {
 
 .header-top {
   background-color: #083d8c;
-  padding: 1rem 0;
+  padding: 0.8rem 0;
   width: 100%;
 }
 
@@ -111,7 +157,9 @@ a {
 }
 
 .primary-nav {
-  padding: 2.2rem 0;
+  padding: 1.9rem 0;
+  -webkit-box-shadow: 0 5px 2px -2px lightgrey;
+          box-shadow: 0 5px 2px -2px lightgrey;
 }
 
 .primary-nav__logo-img {
@@ -136,9 +184,41 @@ a {
   color: #083d8c;
 }
 
+.water-background {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+}
+
 .water-background__img {
   width: 100%;
   height: auto;
-  position: absolute;
+}
+
+.filters {
+  position: relative;
+  background-color: #f6f6f6;
+  margin: 9.1vw 6vw 0;
+  padding: 1.5rem 0;
+  border-radius: 8px;
+}
+
+.filters__dealer-stats {
+  color: #216DDF;
+}
+
+.filters__divider {
+  width: 1px;
+  height: 2rem;
+  margin: 0 1.5rem;
+  background-color: grey;
+}
+
+.filters__label-text {
+  margin-right: 2rem;
+}
+
+.filters__options .custom-checkbox {
+  margin: 0 1rem;
 }
 /*# sourceMappingURL=main.css.map */
