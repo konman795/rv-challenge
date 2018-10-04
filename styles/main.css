@@ -92,8 +92,8 @@ a {
   border-radius: 4px;
   width: 1rem;
   height: 1rem;
-  -webkit-transition: all 0.05s;
-  transition: all 0.05s;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
 }
 
 .custom-checkbox__input:checked ~ .custom-checkbox__label:before {
@@ -125,33 +125,33 @@ a {
   vertical-align: middle;
 }
 
-.header-top {
+.nav-top {
   background-color: #083d8c;
   padding: 0.8rem 0;
   width: 100%;
 }
 
-.header-top__nav {
+.nav-top__nav {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.header-top__nav-item {
+.nav-top__nav-item {
   display: inline-block;
   margin: 0 1.7rem;
 }
 
-.header-top__nav-item:last-child {
+.nav-top__nav-item:last-child {
   margin-right: 0;
 }
 
-.header-top__link {
+.nav-top__link {
   color: white;
   font-size: 0.8rem;
 }
 
-.header-top__link__action-icon {
+.nav-top__link__action-icon {
   height: 0.8rem;
   margin-left: 0.7rem;
 }
