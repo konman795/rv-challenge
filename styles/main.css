@@ -1,0 +1,144 @@
+@font-face {
+  font-family: OpenSans;
+  src: url(/fonts/open-sans/OpenSans-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(/fonts/open-sans/OpenSans-Bold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(/fonts/open-sans/OpenSans-ExtraBold.ttf);
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  background-color: white;
+  font-family: OpenSans, Arial, Helvetica, Sans-Serif;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding: 0 6vw;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.align-items-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.justify-content-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.justify-content-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.btn {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #216DDF;
+  border: 1px solid #216DDF;
+  background-color: transparent;
+  border-radius: 3px;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+}
+
+.btn__icon {
+  height: 1.1rem;
+  vertical-align: middle;
+  margin-right: 0.4rem;
+}
+
+.btn__text {
+  vertical-align: middle;
+}
+
+.header-top {
+  background-color: #083d8c;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.header-top__nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header-top__nav-item {
+  display: inline-block;
+  margin: 0 1.7rem;
+}
+
+.header-top__nav-item:last-child {
+  margin-right: 0;
+}
+
+.header-top__link {
+  color: white;
+  font-size: 0.8rem;
+}
+
+.header-top__link__action-icon {
+  height: 0.8rem;
+  margin-left: 0.7rem;
+}
+
+.primary-nav {
+  padding: 2.2rem 0;
+}
+
+.primary-nav__logo-img {
+  height: 2rem;
+}
+
+.primary-nav__nav-list {
+  margin: 0 3.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  text-align: right;
+  display: inline-block;
+}
+
+.primary-nav__nav-item {
+  display: inline-block;
+  margin: 0 1.7rem;
+}
+
+.primary-nav__link {
+  font-weight: 900;
+  color: #083d8c;
+}
+
+.water-background__img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+/*# sourceMappingURL=main.css.map */
