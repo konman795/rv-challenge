@@ -7,6 +7,7 @@
     <title>Home | PoolPros</title>
     <meta name="description" content="RV Front End Challenge">
     <meta name="author" content="Kon-Kon">
+    <link rel="stlesheet" type="text/css" href="/webfonts/ss-pika.css">
     <link rel="stylesheet" type="text/css" href="/styles/main.css">
 </head>
 
@@ -64,128 +65,438 @@
     <div class="water-background">
         <img class="water-background__img" src="/images/water-image.png">
     </div>
-    <div class="filters">
-        <div class="flex align-items-center justify-content-center">
-            <div class="filters__dealer-stats">
-                <strong>
-                    <span>7</span>
-                    <span>dealers in</span>
-                    <span>28226</span>
-                </strong>
+    <main>
+        <div class="filters">
+            <div class="flex align-items-center justify-content-center">
+                <div class="filters__dealer-stats">
+                    <strong>
+                        <span>7</span>
+                        <span>dealers in</span>
+                        <span>28226</span>
+                    </strong>
+                </div>
+                <div class="filters__divider"></div>
+                <section class="filters__options">
+                    <strong><span class="filters__label-text">Filter Results</span></strong>
+                    <div class="custom-checkbox">
+                        <input class="custom-checkbox__input" id="service" type="checkbox" value="service" checked="checked">
+                        <label class="custom-checkbox__label" for="service">Service</label>
+                    </div>
+                    <div class="custom-checkbox">
+                        <input class="custom-checkbox__input" id="installation" type="checkbox" value="service">
+                        <label class="custom-checkbox__label" for="installation">Installation</label>
+                    </div>
+                    <div class="custom-checkbox">
+                        <input class="custom-checkbox__input" id="residential" type="checkbox" value="service">
+                        <label class="custom-checkbox__label" for="residential">Residential</label>
+                    </div>
+                    <div class="custom-checkbox">
+                        <input class="custom-checkbox__input" id="commercial" type="checkbox" value="service">
+                        <label class="custom-checkbox__label" for="commercial">Commercial</label>
+                    </div>
+                </section>
+                <img class="filters__tooltip-icon" title="Find the right PoolPro using these filters." src="images/tool-tip-icon-filtering.png">
             </div>
-            <div class="filters__divider"></div>
-            <section class="filters__options">
-                <strong><span class="filters__label-text"></span>Filter Results</span></strong>
-                <div class="custom-checkbox">
-                    <input class="custom-checkbox__input" id="service" type="checkbox" value="service" checked="checked">
-                    <label class="custom-checkbox__label" for="service">Service</label>
+        </div>
+        <div class="dealers flex flex-wrap container">
+            <section class="dealer">
+                <div class="dealer__name flex align-items-center justify-content-center">
+                    <span class="dealer__name-text">Premium Pools & Spas of Charlotte</span>
                 </div>
-                <div class="custom-checkbox">
-                    <input class="custom-checkbox__input" id="installation" type="checkbox" value="service">
-                    <label class="custom-checkbox__label" for="installation">Installation</label>
+                <div class="dealer__divider"></div>
+                <div class="dealer__telephone flex align-items-center justify-content-center">
+                    <img class="dealer__telephone-img" src="images/phone-icon-desktop.png">
+                    <span class="dealer__telephone-number">1.888.888.8888</span>
                 </div>
-                <div class="custom-checkbox">
-                    <input class="custom-checkbox__input" id="residential" type="checkbox" value="service">
-                    <label class="custom-checkbox__label" for="residential">Residential</label>
+                <div class="dealer__email">
+                    <em><span class="dealer__email-text">Can't talk now? Click below to send an email.</span></em>
+                    <button type="button" class="dealer__email-btn btn btn--teal">
+                        <img class="btn__icon" src="/images/email-icon.png">
+                        <span class="btn__text">Contact this Pro</span>
+                    </button>
                 </div>
-                <div class="custom-checkbox">
-                    <input class="custom-checkbox__input" id="commercial" type="checkbox" value="service">
-                    <label class="custom-checkbox__label" for="commercial">Commercial</label>
+                <div class="dealer__hours">
+                    <strong><span>Business Hours</span></strong>
+                    <span>Weekdays 7:00am - 7:00pm</span>
+                    <span>Saturdays 7:00am - 3:00pm</span>
+                    <span>Sundays - CLOSED</span>
+                </div>
+                <div class="dealer__certifications flex align-items-center">
+                    <div class="dealer__certifications-list flex flex-wrap">
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/star-installation-pro.png">
+                            <span class="dealer__certification-text">Installation Pro</span>
+                        </div>
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/gear-service-pro.png">
+                            <span class="dealer__certification-text">Service Pro</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="dealer">
+                <div class="dealer__name flex align-items-center justify-content-center">
+                    <span class="dealer__name-text">Aqua Experts</span>
+                </div>
+                <div class="dealer__divider"></div>
+                <div class="dealer__telephone flex align-items-center justify-content-center">
+                    <img class="dealer__telephone-img" src="images/phone-icon-desktop.png">
+                    <span class="dealer__telephone-number">1.888.888.8888</span>
+                </div>
+                <div class="dealer__email">
+                    <em><span class="dealer__email-text">Can't talk now? Click below to send an email.</span></em>
+                    <button type="button" class="dealer__email-btn btn btn--teal">
+                        <img class="btn__icon" src="/images/email-icon.png">
+                        <span class="btn__text">Contact this Pro</span>
+                    </button>
+                </div>
+                <div class="dealer__hours">
+                    <strong><span>Business Hours</span></strong>
+                    <span>Weekdays 7:00am - 7:00pm</span>
+                    <span>Saturdays 7:00am - 3:00pm</span>
+                    <span>Sundays - CLOSED</span>
+                </div>
+                <div class="dealer__certifications flex align-items-center">
+                    <div class="dealer__certifications-list flex flex-wrap">
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/star-installation-pro.png">
+                            <span class="dealer__certification-text">Installation Pro</span>
+                        </div>
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/gear-service-pro.png">
+                            <span class="dealer__certification-text">Service Pro</span>
+                        </div>
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/home-residential-pro.png">
+                            <span class="dealer__certification-text">Residential Pro</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="dealer">
+                <div class="dealer__name flex align-items-center justify-content-center">
+                    <span class="dealer__name-text">Premium Pools & Spas of Charlotte</span>
+                </div>
+                <div class="dealer__divider"></div>
+                <div class="dealer__telephone flex align-items-center justify-content-center">
+                    <img class="dealer__telephone-img" src="images/phone-icon-desktop.png">
+                    <span class="dealer__telephone-number">1.888.888.8888</span>
+                </div>
+                <div class="dealer__email">
+                    <em><span class="dealer__email-text">Can't talk now? Click below to send an email.</span></em>
+                    <button type="button" class="dealer__email-btn btn btn--teal">
+                        <img class="btn__icon" src="/images/email-icon.png">
+                        <span class="btn__text">Contact this Pro</span>
+                    </button>
+                </div>
+                <div class="dealer__hours">
+                    <strong><span>Business Hours</span></strong>
+                    <span>Weekdays 7:00am - 7:00pm</span>
+                    <span>Saturdays 7:00am - 3:00pm</span>
+                    <span>Sundays - CLOSED</span>
+                </div>
+                <div class="dealer__certifications flex align-items-center">
+                    <div class="dealer__certifications-list flex flex-wrap">
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/star-installation-pro.png">
+                            <span class="dealer__certification-text">Installation Pro</span>
+                        </div>
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/gear-service-pro.png">
+                            <span class="dealer__certification-text">Service Pro</span>
+                        </div>
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/home-residential-pro.png">
+                            <span class="dealer__certification-text">Residential Pro</span>
+                        </div>
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/home-residential-pro.png">
+                            <span class="dealer__certification-text">Commercial Pro</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="dealer">
+                <div class="dealer__name flex align-items-center justify-content-center">
+                    <span class="dealer__name-text">Premium Pools & Spas of Charlotte</span>
+                </div>
+                <div class="dealer__divider"></div>
+                <div class="dealer__telephone flex align-items-center justify-content-center">
+                    <img class="dealer__telephone-img" src="images/phone-icon-desktop.png">
+                    <span class="dealer__telephone-number">1.888.888.8888</span>
+                </div>
+                <div class="dealer__email">
+                    <em><span class="dealer__email-text">Can't talk now? Click below to send an email.</span></em>
+                    <button type="button" class="dealer__email-btn btn btn--teal">
+                        <img class="btn__icon" src="/images/email-icon.png">
+                        <span class="btn__text">Contact this Pro</span>
+                    </button>
+                </div>
+                <div class="dealer__hours">
+                    <strong><span>Business Hours</span></strong>
+                    <span>Weekdays 7:00am - 7:00pm</span>
+                    <span>Saturdays 7:00am - 3:00pm</span>
+                    <span>Sundays - CLOSED</span>
+                </div>
+                <div class="dealer__certifications flex align-items-center">
+                    <div class="dealer__certifications-list flex flex-wrap">
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/star-installation-pro.png">
+                            <span class="dealer__certification-text">Installation Pro</span>
+                        </div>
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/gear-service-pro.png">
+                            <span class="dealer__certification-text">Service Pro</span>
+                        </div>
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/home-residential-pro.png">
+                            <span class="dealer__certification-text">Residential Pro</span>
+                        </div>
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/home-residential-pro.png">
+                            <span class="dealer__certification-text">Commercial Pro</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="dealer">
+                <div class="dealer__name flex align-items-center justify-content-center">
+                    <span class="dealer__name-text">Premium Pools & Spas of Charlotte</span>
+                </div>
+                <div class="dealer__divider"></div>
+                <div class="dealer__telephone flex align-items-center justify-content-center">
+                    <img class="dealer__telephone-img" src="images/phone-icon-desktop.png">
+                    <span class="dealer__telephone-number">1.888.888.8888</span>
+                </div>
+                <div class="dealer__email">
+                    <em><span class="dealer__email-text">Can't talk now? Click below to send an email.</span></em>
+                    <button type="button" class="dealer__email-btn btn btn--teal">
+                        <img class="btn__icon" src="/images/email-icon.png">
+                        <span class="btn__text">Contact this Pro</span>
+                    </button>
+                </div>
+                <div class="dealer__hours">
+                    <strong><span>Business Hours</span></strong>
+                    <span>Weekdays 7:00am - 7:00pm</span>
+                    <span>Saturdays 7:00am - 3:00pm</span>
+                    <span>Sundays - CLOSED</span>
+                </div>
+                <div class="dealer__certifications flex align-items-center">
+                    <div class="dealer__certifications-list flex flex-wrap">
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/star-installation-pro.png">
+                            <span class="dealer__certification-text">Installation Pro</span>
+                        </div>
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/gear-service-pro.png">
+                            <span class="dealer__certification-text">Service Pro</span>
+                        </div>
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/home-residential-pro.png">
+                            <span class="dealer__certification-text">Residential Pro</span>
+                        </div>
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/home-residential-pro.png">
+                            <span class="dealer__certification-text">Commercial Pro</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="dealer">
+                <div class="dealer__name flex align-items-center justify-content-center">
+                    <span class="dealer__name-text">Premium Pools & Spas of Charlotte</span>
+                </div>
+                <div class="dealer__divider"></div>
+                <div class="dealer__telephone flex align-items-center justify-content-center">
+                    <img class="dealer__telephone-img" src="images/phone-icon-desktop.png">
+                    <span class="dealer__telephone-number">1.888.888.8888</span>
+                </div>
+                <div class="dealer__email">
+                    <em><span class="dealer__email-text">Can't talk now? Click below to send an email.</span></em>
+                    <button type="button" class="dealer__email-btn btn btn--teal">
+                        <img class="btn__icon" src="/images/email-icon.png">
+                        <span class="btn__text">Contact this Pro</span>
+                    </button>
+                </div>
+                <div class="dealer__hours">
+                    <strong><span>Business Hours</span></strong>
+                    <span>Weekdays 7:00am - 7:00pm</span>
+                    <span>Saturdays 7:00am - 3:00pm</span>
+                    <span>Sundays - CLOSED</span>
+                </div>
+                <div class="dealer__certifications flex align-items-center">
+                    <div class="dealer__certifications-list flex flex-wrap">
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/star-installation-pro.png">
+                            <span class="dealer__certification-text">Installation Pro</span>
+                        </div>
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/gear-service-pro.png">
+                            <span class="dealer__certification-text">Service Pro</span>
+                        </div>
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/home-residential-pro.png">
+                            <span class="dealer__certification-text">Residential Pro</span>
+                        </div>
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/home-residential-pro.png">
+                            <span class="dealer__certification-text">Commercial Pro</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="dealer">
+                <div class="dealer__name flex align-items-center justify-content-center">
+                    <span class="dealer__name-text">Premium Pools & Spas of Charlotte</span>
+                </div>
+                <div class="dealer__divider"></div>
+                <div class="dealer__telephone flex align-items-center justify-content-center">
+                    <img class="dealer__telephone-img" src="images/phone-icon-desktop.png">
+                    <span class="dealer__telephone-number">1.888.888.8888</span>
+                </div>
+                <div class="dealer__email">
+                    <em><span class="dealer__email-text">Can't talk now? Click below to send an email.</span></em>
+                    <button type="button" class="dealer__email-btn btn btn--teal">
+                        <img class="btn__icon" src="/images/email-icon.png">
+                        <span class="btn__text">Contact this Pro</span>
+                    </button>
+                </div>
+                <div class="dealer__hours">
+                    <strong><span>Business Hours</span></strong>
+                    <span>Weekdays 7:00am - 7:00pm</span>
+                    <span>Saturdays 7:00am - 3:00pm</span>
+                    <span>Sundays - CLOSED</span>
+                </div>
+                <div class="dealer__certifications flex align-items-center">
+                    <div class="dealer__certifications-list flex flex-wrap">
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/star-installation-pro.png">
+                            <span class="dealer__certification-text">Installation Pro</span>
+                        </div>
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/gear-service-pro.png">
+                            <span class="dealer__certification-text">Service Pro</span>
+                        </div>
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/home-residential-pro.png">
+                            <span class="dealer__certification-text">Residential Pro</span>
+                        </div>
+                        <div class="dealer__certification">
+                            <img class="dealer__certification-icon" src="/images/home-residential-pro.png">
+                            <span class="dealer__certification-text">Commercial Pro</span>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
-    </div>
-    <div class="dealers">
-        <div class="flex">
-            <section class="dealer">
-                <div class="dealer__name">
-                    <span class="dealer__text">Dealer Name</span>
-                </div>
-                <div class="seperator-grey"></div>
-                <div class="dealer__telephone">
-                    <img class="dealer__telephone-img" src="images/phone-icon-desktop.png">
-                    <span class="dealer__telephone-number">1.888.888.8888</span>
-                </div>
-                <div class="dealer__email">
-                    <span class="dealer__email-text"></span>
-                    <button type="button" class="btn btn--teal">
-                        <img class="btn__icon" src="/images/email-icon.png">
-                        <span class="btn__text">Contact this Pro</span>
-                    </button>
-                </div>
-                <div class="dealer__hours">
-                    <strong><span>Business Hours</span></strong>
-                    <span>Weekdays 7:00am - 7:00pm</span>
-                    <span>Saturdays 7:00am - 3:00pm</span>
-                    <span>Sundays - CLOSED</span>
-                </div>
-                <div class="dealer__certifications">
-                    <div class="dealer__certification">
-                        <img class="dealer__certification-icon" src="/images/star-installation-pro.png">
-                        <span class="dealer__certification-text">Installation Pro</span>
-                    </div>
-                </div>
-            </section>
-            <section class="dealer">
-                <div class="dealer__name">
-                    <span class="dealer__text">Dealer Name</span>
-                </div>
-                <div class="seperator-grey"></div>
-                <div class="dealer__telephone">
-                    <img class="dealer__telephone-img" src="images/phone-icon-desktop.png">
-                    <span class="dealer__telephone-number">1.888.888.8888</span>
-                </div>
-                <div class="dealer__email">
-                    <span class="dealer__email-text"></span>
-                    <button type="button" class="btn btn--teal">
-                        <img class="btn__icon" src="/images/email-icon.png">
-                        <span class="btn__text">Contact this Pro</span>
-                    </button>
-                </div>
-                <div class="dealer__hours">
-                    <strong><span>Business Hours</span></strong>
-                    <span>Weekdays 7:00am - 7:00pm</span>
-                    <span>Saturdays 7:00am - 3:00pm</span>
-                    <span>Sundays - CLOSED</span>
-                </div>
-                <div class="dealer__certifications">
-                    <div class="dealer__certification">
-                        <img class="dealer__certification-icon" src="/images/star-installation-pro.png">
-                        <span class="dealer__certification-text">Installation Pro</span>
-                    </div>
-                </div>
-            </section>
-            <section class="dealer">
-                <div class="dealer__name">
-                    <span class="dealer__text">Dealer Name</span>
-                </div>
-                <div class="seperator-grey"></div>
-                <div class="dealer__telephone">
-                    <img class="dealer__telephone-img" src="images/phone-icon-desktop.png">
-                    <span class="dealer__telephone-number">1.888.888.8888</span>
-                </div>
-                <div class="dealer__email">
-                    <span class="dealer__email-text"></span>
-                    <button type="button" class="btn btn--teal">
-                        <img class="btn__icon" src="/images/email-icon.png">
-                        <span class="btn__text">Contact this Pro</span>
-                    </button>
-                </div>
-                <div class="dealer__hours">
-                    <strong><span>Business Hours</span></strong>
-                    <span>Weekdays 7:00am - 7:00pm</span>
-                    <span>Saturdays 7:00am - 3:00pm</span>
-                    <span>Sundays - CLOSED</span>
-                </div>
-                <div class="dealer__certifications">
-                    <div class="dealer__certification">
-                        <img class="dealer__certification-icon" src="/images/star-installation-pro.png">
-                        <span class="dealer__certification-text">Installation Pro</span>
-                    </div>
-                </div>
-            </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__top">
+            <img class="footer__logo" src="images/pool-pros-logo-footer.png" alt="Pool Pros Footer logo">
+            <div class="footer__social-media flex align-items-center justify-content-center">
+                <span class="footer__connect-text">Connect with us</span>
+                <a href="#" class="footer__social-link" title="Visit our Twitter page">
+                    <img class="footer__icon" src="images/twitter-icon.png" alt="Twitter logo">
+                </a>
+                <a href="#" class="footer__social-link" title="Visit our Facebook page">
+                    <img class="footer__icon" src="images/facebook-icon.png" alt="Facebook logo">
+                </a>
+                <a href="#" class="footer__social-link" title="Visit our YouTube page">
+                    <img class="footer__icon" src="images/youtube-icon.png" alt="YouTube logo">
+                </a>
+            </div>
         </div>
+        <div class="footer__bottom">
+            <ul class="footer__menu">
+                <li class="footer__list-item">
+                    <span class="footer__copyright-text">&copy; 2017 Pool Pros</span>
+                </li>
+                <li class="footer__list-item">
+                    <a href="#" class="footer__link">Privacy Policy</a>
+                </li>
+                <li class="footer__list-item">
+                    <a href="#" class="footer__link">Terms and Conditions</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <div class="modal">
+        <section>
+            <header class="modal__header">
+                <button class="modal__close-btn" type="button" title="Close email form">&times;</button>
+                <span class="modal__subhead-text">Email</span>
+                <span class="modal__header-text">Premium Pools & Spas of Charlotte</span>
+            </header>
+            <div class="modal__body">
+                <span class="modal__instructions">Fill out the form below and Premium Pools & Spas of Charlotte will
+                    get in touch.</span>
+                <div class="modal__contact-form">
+                    <form id="pool-pro-contact-form" class="modal__form" method="POST" action="#">
+                        <div class="form-group">
+                            <div class="flex align-items-center justify-content-between">
+                                <label class="form-label" for="fullName" class="form-label">First and last name</label>
+                                <div class="form-required"></div>
+                            </div>
+                            <input class="form-field" type="text" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="flex align-items-center justify-content-between">
+                                <label class="form-label" for="phoneNumber">Phone number</label>
+                                <div class="form-required"></div>
+                            </div>
+                            <input class="form-field" type="tel" name="phoneNumber" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="flex align-items-center justify-content-between">
+                                <label class="form-label" for="email">Email address</label>
+                                <div class="form-required"></div>
+                            </div>
+                            <input class="form-field" type="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="flex align-items-center justify-content-between">
+                                <label class="form-label" for="comment">Comments or questions</label>
+                                <span class="form-optional">optional</span>
+                            </div>
+                            <textarea class="form-field" type="text" name="comment" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <div class="flex align-items-center justify-content-between">
+                                <label class="form-label">Do you currently own a pool or spa?</label>
+                                <span class="form-optional">optional</span>
+                            </div>
+                            <div class="custom-radio-group">
+                                <div class="custom-radio">
+                                    <label class="custom-radio__label">
+                                        <input class="custom-radio__input" type="radio" name="ownership" value="yes">
+                                        <span class="custom-radio__span">Yes</span>
+                                    </label>
+                                </div>
+                                <div class="custom-radio">
+                                    <label class="custom-radio__label">
+                                        <input class="custom-radio__input" type="radio" name="ownership" value="no">
+                                        <span class="custom-radio__span">No</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__form-seperator"></div>
+                        <div class="modal__form-submit-wrapper">
+                            <button class="modal__form-submit-btn" type="submit">
+                                <span class="modal__form-submit-text">Send my email</span>
+                                <img class="modal__form-submit-arrow" src="/images/next-arrow.png">
+                            </button>
+                        </div>
+                        <input type="hidden" name="emailRecipient" value="">
+                    </form>
+                </div>
+            </div>
+            <footer class="modal__footer">
+                <span class="modal__footer-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</span>
+            </footer>
+        </section>
     </div>
+    <div class="modal-overlay"></div>
     <script type="text/javascript" src="scripts/dealers.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>
 </body>
