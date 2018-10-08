@@ -448,20 +448,20 @@ a {
 }
 .modal {
     display: none;
+    $modal-width: 38rem;
+    $modal-height: 95vh;
+    position: fixed;
+    width: $modal-width;
+    max-height: $modal-height;
+    overflow-y: auto;
+    background-color: white;
+    top: calc(50% - #{$modal-height}/2);
+    left: calc(50% - #{$modal-width}/2);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.4);;
+    z-index: 10;
     &.show {
-        animation: fadeIn 0.5s, slideInAbove 0.5s;
         display: block;
-        $modal-width: 38rem;
-        $modal-height: 95vh;
-        position: fixed;
-        width: $modal-width;
-        max-height: $modal-height;
-        overflow-y: auto;
-        background-color: white;
-        top: calc(50% - #{$modal-height}/2);
-        left: calc(50% - #{$modal-width}/2);
-        box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.4);;
-        z-index: 10;
+        animation: fadeIn 0.5s, slideInAbove 0.5s;
     }
     &__header {
         color: white;

@@ -543,12 +543,6 @@ a {
 
 .modal {
   display: none;
-}
-
-.modal.show {
-  -webkit-animation: fadeIn 0.5s, slideInAbove 0.5s;
-          animation: fadeIn 0.5s, slideInAbove 0.5s;
-  display: block;
   position: fixed;
   width: 38rem;
   max-height: 95vh;
@@ -559,6 +553,12 @@ a {
   -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.4);
   z-index: 10;
+}
+
+.modal.show {
+  display: block;
+  -webkit-animation: fadeIn 0.5s, slideInAbove 0.5s;
+          animation: fadeIn 0.5s, slideInAbove 0.5s;
 }
 
 .modal__header {
