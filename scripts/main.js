@@ -1,4 +1,6 @@
 const dealers = dealersData.dealers;
+let filteredDealers = dealersData.dealers;
+showResults(dealers);
 
 let filterOptions = [];
 const filterCheckboxes = document.querySelectorAll('.filters__options .custom-checkbox__input');
@@ -14,96 +16,103 @@ for (let i = 0; i < filterCheckboxes.length; i++) {
                 }
             }
         }
-        console.log(filterOptions);
+        filteredDealers = dealers.filter(function(cert) {
+            // return filterOptions.indexOf(cert.data.certifications) >= 0;
+        });
+        showResults(dealers);
     });
 }
 
-let dealerFrag = document.createDocumentFragment();
-
-for (let i = 0; i < dealers.length; i++) {
-    let dealerSection = createElement('section', ['dealer'], '');
-
-    let dealerName = createElement('div', ['dealer__name', 'flex', 'align-items-center', 'justify-content-center'], '');
-    let dealerText = createElement('span', ['dealer__name-text'], dealers[i].data.name);
-    let seperatorGrey = createElement('div', ['dealer__divider'], '');
-
-    let dealerTelephone = createElement('div', ['dealer__telephone', 'flex', 'align-items-center', 'justify-content-center'], '');
-    let dealerTelephoneImg = createImgElement(['dealer__telephone-img'], 'images/phone-icon-desktop.png');
-    let dealerTelephoneNumber = createElement('span', ['dealer__telephone-number'], dealers[i].data.phone1);
-
-    let dealerEmail = createElement('div', ['dealer__email'], '');
-    let dealerEmailem = createElement('em', '', '');
-    let dealerEmailText = createElement('span', ['dealer__email-text'], "Can't talk now? Click below to send an email.");
-    let dealerEmailBtn = createBtnElement(['dealer__email-btn', 'btn', 'btn--teal'], dealers[i].data.companyID);
-    let dealerEmailIcon = createImgElement(['btn__icon'], '/images/email-icon.png');
-    let dealerEmailBtnText = createElement('span', ['btn__text'], 'Contact this Pro');
-
-    let dealerHours = createElement('div', ['dealer__hours'], '');
-    let dealerHoursStrong = createElement('strong', '', '');
-    let dealerHoursBusinessText = createElement('span', '', 'Business Hours');
-    let dealerHoursWeekDays = createElement('span', '', 'Weekdays ' + dealers[i].data.weekHours.mon);
-    let dealerHoursSat = createElement('span', '', 'Saturdays ' + (dealers[i].data.weekHours.sat.length > 0 ? dealers[i].data.weekHours.sat : ' - CLOSED'));
-    let dealerHoursSun = createElement('span', '', 'Sundays - ' + (dealers[i].data.weekHours.sun.length > 0 ? dealers[i].data.weekHours.sun : 'CLOSED'));
-
-    let dealerCerts = createElement('div', ['dealer__certifications', 'flex', 'align-items-center'], '');
-    let dealerCertsList = createElement('div', ['dealer__certifications-list', 'flex', 'flex-wrap'], '');
+function showResults(dealers) {
+    let dealerFrag = document.createDocumentFragment();
+    const dealersContainer = document.querySelector('#dealers-container');
     
-    for (let j = 0; j < dealers[i].data.certifications.length; j++) {
-        var certIconpath = '';
-        switch(dealers[i].data.certifications[j]) {
-            case 'Installation Pro':
-                certIconpath = '/images/star-installation-pro.png'
-                break;
-            case 'Commercial Pro':
-                certIconpath = '/images/users-commercial-pro.png'
-                break;
-            case 'Residential Pro':
-                certIconpath = '/images/home-residential-pro.png'
-                break;
-            case 'Service Pro':
-                certIconpath = '/images/gear-service-pro.png'
-                break;
+    for (let i = 0; i < dealers.length; i++) {
+        let dealerSection = createElement('section', ['dealer'], '');
+    
+        let dealerName = createElement('div', ['dealer__name', 'flex', 'align-items-center', 'justify-content-center'], '');
+        let dealerText = createElement('span', ['dealer__name-text'], dealers[i].data.name);
+        let seperatorGrey = createElement('div', ['dealer__divider'], '');
+    
+        let dealerTelephone = createElement('div', ['dealer__telephone', 'flex', 'align-items-center', 'justify-content-center'], '');
+        let dealerTelephoneImg = createImgElement(['dealer__telephone-img'], 'images/phone-icon-desktop.png');
+        let dealerTelephoneNumber = createElement('span', ['dealer__telephone-number'], dealers[i].data.phone1);
+    
+        let dealerEmail = createElement('div', ['dealer__email'], '');
+        let dealerEmailem = createElement('em', '', '');
+        let dealerEmailText = createElement('span', ['dealer__email-text'], "Can't talk now? Click below to send an email.");
+        let dealerEmailBtn = createBtnElement(['dealer__email-btn', 'btn', 'btn--teal'], dealers[i].data.companyID);
+        let dealerEmailIcon = createImgElement(['btn__icon'], '/images/email-icon.png');
+        let dealerEmailBtnText = createElement('span', ['btn__text'], 'Contact this Pro');
+    
+        let dealerHours = createElement('div', ['dealer__hours'], '');
+        let dealerHoursStrong = createElement('strong', '', '');
+        let dealerHoursBusinessText = createElement('span', '', 'Business Hours');
+        let dealerHoursWeekDays = createElement('span', '', 'Weekdays ' + dealers[i].data.weekHours.mon);
+        let dealerHoursSat = createElement('span', '', 'Saturdays ' + (dealers[i].data.weekHours.sat.length > 0 ? dealers[i].data.weekHours.sat : ' - CLOSED'));
+        let dealerHoursSun = createElement('span', '', 'Sundays - ' + (dealers[i].data.weekHours.sun.length > 0 ? dealers[i].data.weekHours.sun : 'CLOSED'));
+    
+        let dealerCerts = createElement('div', ['dealer__certifications', 'flex', 'align-items-center'], '');
+        let dealerCertsList = createElement('div', ['dealer__certifications-list', 'flex', 'flex-wrap'], '');
+        
+        for (let j = 0; j < dealers[i].data.certifications.length; j++) {
+            var certIconpath = '';
+            switch(dealers[i].data.certifications[j]) {
+                case 'Installation Pro':
+                    certIconpath = '/images/star-installation-pro.png'
+                    break;
+                case 'Commercial Pro':
+                    certIconpath = '/images/users-commercial-pro.png'
+                    break;
+                case 'Residential Pro':
+                    certIconpath = '/images/home-residential-pro.png'
+                    break;
+                case 'Service Pro':
+                    certIconpath = '/images/gear-service-pro.png'
+                    break;
+            }
+            let certification = createElement('div', ['dealer__certification'], '');
+            let certificationImg = createImgElement(['dealer__certification-icon'], certIconpath);
+            let certificationText = createElement('span', ['dealer__certification-text'], dealers[i].data.certifications[j]);
+    
+            certification.appendChild(certificationImg);
+            certification.appendChild(certificationText);
+    
+            dealerCertsList.appendChild(certification);
         }
-        let certification = createElement('div', ['dealer__certification'], '');
-        let certificationImg = createImgElement(['dealer__certification-icon'], certIconpath);
-        let certificationText = createElement('span', ['dealer__certification-text'], dealers[i].data.certifications[j]);
-
-        certification.appendChild(certificationImg);
-        certification.appendChild(certificationText);
-
-        dealerCertsList.appendChild(certification);
+    
+        dealerName.appendChild(dealerText);
+    
+        dealerTelephone.appendChild(dealerTelephoneImg);
+        dealerTelephone.appendChild(dealerTelephoneNumber);
+    
+        dealerEmailem.appendChild(dealerEmailText);
+        dealerEmailBtn.appendChild(dealerEmailIcon);
+        dealerEmailBtn.appendChild(dealerEmailBtnText);
+        dealerEmail.appendChild(dealerEmailem);
+        dealerEmail.appendChild(dealerEmailBtn);
+    
+        dealerHoursStrong.appendChild(dealerHoursBusinessText);
+        dealerHours.appendChild(dealerHoursStrong);
+        dealerHours.appendChild(dealerHoursWeekDays);
+        dealerHours.appendChild(dealerHoursSat);
+        dealerHours.appendChild(dealerHoursSun);
+    
+        dealerCerts.appendChild(dealerCertsList);
+    
+        dealerSection.appendChild(dealerName);
+        dealerSection.appendChild(seperatorGrey);
+        dealerSection.appendChild(dealerTelephone);
+        dealerSection.appendChild(dealerEmail);
+        dealerSection.appendChild(dealerHours);
+        dealerSection.appendChild(dealerCerts);
+        
+        dealerFrag.appendChild(dealerSection);
     }
 
-    dealerName.appendChild(dealerText);
-
-    dealerTelephone.appendChild(dealerTelephoneImg);
-    dealerTelephone.appendChild(dealerTelephoneNumber);
-
-    dealerEmailem.appendChild(dealerEmailText);
-    dealerEmailBtn.appendChild(dealerEmailIcon);
-    dealerEmailBtn.appendChild(dealerEmailBtnText);
-    dealerEmail.appendChild(dealerEmailem);
-    dealerEmail.appendChild(dealerEmailBtn);
-
-    dealerHoursStrong.appendChild(dealerHoursBusinessText);
-    dealerHours.appendChild(dealerHoursStrong);
-    dealerHours.appendChild(dealerHoursWeekDays);
-    dealerHours.appendChild(dealerHoursSat);
-    dealerHours.appendChild(dealerHoursSun);
-
-    dealerCerts.appendChild(dealerCertsList);
-
-    dealerSection.appendChild(dealerName);
-    dealerSection.appendChild(seperatorGrey);
-    dealerSection.appendChild(dealerTelephone);
-    dealerSection.appendChild(dealerEmail);
-    dealerSection.appendChild(dealerHours);
-    dealerSection.appendChild(dealerCerts);
-    
-    dealerFrag.appendChild(dealerSection);
+    dealersContainer.innerHTML = "";
+    dealersContainer.appendChild(dealerFrag);
 }
-
-document.querySelector('#dealers-container').appendChild(dealerFrag);
 
 function createElement(tagName, classNamesArray, text) {
     let el = document.createElement(tagName);
