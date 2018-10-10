@@ -85,7 +85,7 @@ a {
             position: absolute;
             display: block;
             left: 0;
-            top: 0.15rem;
+            top: 0.2rem;
             margin-right: 1rem;
             background-color: white;
             border: 1px solid #D8D8D8;
@@ -98,7 +98,7 @@ a {
     &__input:checked ~ &__label:before {
         width: 0.4rem;
         height: 0.4rem;
-        border: 6.5px solid $secondary-blue;
+        border: 6px solid $secondary-blue;
     }
 }
 .custom-radio {
@@ -184,6 +184,11 @@ a {
     background-size: contain;
     background-repeat: no-repeat;
 }
+.form-group.valid {
+    .form-required {
+        background-image: url('/images/checkmark-circle.png');
+    }
+}
 .form-optional {
     font-size: 0.8rem;
     font-style: italic;
@@ -209,10 +214,10 @@ a {
     &__link {
         color: white;
         font-size: 0.8rem;
-        &__action-icon {
-            height: 0.8rem;
-            margin-left: 0.7rem;
-        }
+    }
+    &__link-icon {
+        height: 0.8rem;
+        margin-left: 0.7rem;
     }
 }
 
@@ -237,6 +242,12 @@ a {
         font-weight: 900;
         font-size: 1rem;
         color: $primary-blue;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.2s;
+        &:hover {
+            border-bottom: 2px solid $primary-blue;
+            transition: border-color 0.2s;
+        }
     }
 }
 
@@ -513,6 +524,12 @@ a {
         background-color: transparent;
         border: none;
         cursor: pointer;
+        &:disabled:hover, &:disabled:focus {
+            cursor: not-allowed !important;
+            .modal__form-submit-arrow {
+                animation: none;
+            }
+        }
         &:hover, &:focus {
             outline: none;
             .modal__form-submit-arrow {

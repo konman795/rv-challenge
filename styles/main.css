@@ -109,7 +109,7 @@ a {
   position: absolute;
   display: block;
   left: 0;
-  top: 0.15rem;
+  top: 0.2rem;
   margin-right: 1rem;
   background-color: white;
   border: 1px solid #D8D8D8;
@@ -123,7 +123,7 @@ a {
 .custom-checkbox__input:checked ~ .custom-checkbox__label:before {
   width: 0.4rem;
   height: 0.4rem;
-  border: 6.5px solid #216DDF;
+  border: 6px solid #216DDF;
 }
 
 .custom-radio {
@@ -229,6 +229,10 @@ a {
   background-repeat: no-repeat;
 }
 
+.form-group.valid .form-required {
+  background-image: url("/images/checkmark-circle.png");
+}
+
 .form-optional {
   font-size: 0.8rem;
   font-style: italic;
@@ -262,7 +266,7 @@ a {
   font-size: 0.8rem;
 }
 
-.nav-top__link__action-icon {
+.nav-top__link-icon {
   height: 0.8rem;
   margin-left: 0.7rem;
 }
@@ -294,6 +298,15 @@ a {
   font-weight: 900;
   font-size: 1rem;
   color: #083d8c;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+
+.primary-nav__link:hover {
+  border-bottom: 2px solid #083d8c;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
 }
 
 .water-background {
@@ -620,6 +633,15 @@ a {
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+.modal__form-submit-btn:disabled:hover, .modal__form-submit-btn:disabled:focus {
+  cursor: not-allowed !important;
+}
+
+.modal__form-submit-btn:disabled:hover .modal__form-submit-arrow, .modal__form-submit-btn:disabled:focus .modal__form-submit-arrow {
+  -webkit-animation: none;
+          animation: none;
 }
 
 .modal__form-submit-btn:hover, .modal__form-submit-btn:focus {
