@@ -451,27 +451,25 @@ a {
 }
 
 .dealer__certifications-list {
-  width: 90%;
   margin: 0 auto;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.dealer__certification {
+.dealer__certification-col {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
-  margin: 0.2rem 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 
-.dealer__certification:nth-child(2n+1) {
-  text-align: right;
+.dealer__certification-col:first-child {
+  margin-right: 2rem;
 }
 
-.dealer__certification:nth-child(2n+1) .dealer__certification-text {
-  margin-right: 20%;
-}
-
-.dealer__certification:nth-child(2n) .dealer__certification-icon {
-  margin-left: 20%;
+.dealer__certification-col:last-child {
+  margin-left: 2rem;
 }
 
 .dealer__certification-icon {

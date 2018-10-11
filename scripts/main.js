@@ -61,6 +61,8 @@ function showResults(dealers) {
     
         let dealerCerts = createElement('div', ['dealer__certifications', 'flex', 'align-items-center'], '');
         let dealerCertsList = createElement('div', ['dealer__certifications-list', 'flex', 'flex-wrap'], '');
+        let dealerCertCol1 = createElement('div', ['dealer__certification-col'], '');
+        let dealerCertCol2 = createElement('div', ['dealer__certification-col'], '');
         
         for (let j = 0; j < dealers[i].data.certifications.length; j++) {
             var certIconpath = '';
@@ -84,9 +86,16 @@ function showResults(dealers) {
     
             certification.appendChild(certificationImg);
             certification.appendChild(certificationText);
-    
-            dealerCertsList.appendChild(certification);
+            
+            if (j % 2 === 0) {
+                dealerCertCol1.appendChild(certification);
+            }
+            else {
+                dealerCertCol2.appendChild(certification);
+            }
         }
+        dealerCertsList.appendChild(dealerCertCol1);
+        dealerCertsList.appendChild(dealerCertCol2);
     
         dealerName.appendChild(dealerText);
     

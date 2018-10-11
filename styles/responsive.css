@@ -1,0 +1,17 @@
+@media screen and (min-width: 1920px) {
+  .dealer {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 24.05%;
+            flex: 0 0 24.05%;
+  }
+  .dealer:nth-child(3n), .dealer:nth-child(3n + 1) {
+    margin: 1rem 0.6166665%;
+  }
+  .dealer:nth-child(4n) {
+    margin-right: 0;
+  }
+  .dealer:nth-child(4n + 1) {
+    margin-left: 0;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

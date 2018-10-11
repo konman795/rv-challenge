@@ -7,8 +7,8 @@
     <title>Home | PoolPros</title>
     <meta name="description" content="RV Front End Challenge">
     <meta name="author" content="Kon-Kon">
-    <link rel="stlesheet" type="text/css" href="/webfonts/ss-pika.css">
     <link rel="stylesheet" type="text/css" href="/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="/styles/responsive.css">
 </head>
 
 <body>
@@ -98,7 +98,45 @@
                 <img class="filters__tooltip-icon" title="Find the right PoolPro using these filters." src="images/tool-tip-icon-filtering.png">
             </div>
         </div>
-        <div id="dealers-container" class="dealers flex flex-wrap container"></div>
+        <div id="dealers-container" class="dealers flex flex-wrap container">
+            <section class="dealer">
+                <div class="dealer__name flex align-items-center justify-content-center"><span class="dealer__name-text">Premium
+                        Pools &amp; Spas of Charlotte</span></div>
+                <div class="dealer__divider"></div>
+                <div class="dealer__telephone flex align-items-center justify-content-center"><img class="dealer__telephone-img"
+                        src="images/phone-icon-desktop.png"><span class="dealer__telephone-number">1-888-888-8888</span></div>
+                <div class="dealer__email"><em><span class="dealer__email-text">Can't talk now? Click below to send an
+                            email.</span></em><button class="dealer__email-btn btn btn--teal" data-company-id="401928"
+                        type="button"><img class="btn__icon" src="/images/email-icon.png"><span class="btn__text">Contact
+                            this Pro</span></button></div>
+                <div class="dealer__hours"><strong><span>Business Hours</span></strong><span>Weekdays 7:00am - 7:00pm</span><span>Saturdays
+                        - CLOSED</span><span>Sundays - On Call</span></div>
+                <div class="dealer__certifications flex align-items-center">
+                    <div class="dealer__certifications-list flex flex-wrap">
+                        <div class="dealer__certification-col">
+                            <div class="dealer__certification">
+                                <img class="dealer__certification-icon" src="/images/star-installation-pro.png">
+                                <span class="dealer__certification-text">Installation Pro</span>
+                            </div>
+                            <div class="dealer__certification">
+                                <img class="dealer__certification-icon" src="/images/gear-service-pro.png">
+                                <span class="dealer__certification-text">Service Pro</span>
+                            </div>
+                        </div>
+                        <div class="dealer__certification-col">
+                            <div class="dealer__certification">
+                                <img class="dealer__certification-icon" src="/images/home-residential-pro.png">
+                                <span class="dealer__certification-text">Residential Pro</span>
+                            </div>
+                            <div class="dealer__certification">
+                                <img class="dealer__certification-icon" src="/images/users-commercial-pro.png">
+                                <span class="dealer__certification-text">Commercial Pro</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
     <footer class="footer">
         <div class="footer__top">
@@ -138,7 +176,8 @@
                 <span class="modal__header-text poolpro-company-name">Premium Pools & Spas of Charlotte</span>
             </header>
             <div class="modal__body">
-                <span class="modal__instructions">Fill out the form below and <span class="poolpro-company-name">Premium Pools & Spas of Charlotte</span> will
+                <span class="modal__instructions">Fill out the form below and <span class="poolpro-company-name">Premium
+                        Pools & Spas of Charlotte</span> will
                     get in touch.</span>
                 <div class="modal__contact-form">
                     <form id="pool-pro-contact-form" class="modal__form" method="POST" action="#">
@@ -202,7 +241,9 @@
                 </div>
             </div>
             <footer class="modal__footer">
-                <span class="modal__footer-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"</span>
+                <span class="modal__footer-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco"</span>
             </footer>
         </section>
     </div>
