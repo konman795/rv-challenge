@@ -42,6 +42,7 @@ body {
 }
 
 main {
+  display: block;
   padding-bottom: 4rem;
 }
 
@@ -120,6 +121,13 @@ a {
   transition: all 0.1s;
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .custom-checkbox__label:before {
+    /* IE10+ Position Fix */
+    top: 0;
+  }
+}
+
 .custom-checkbox__input:checked ~ .custom-checkbox__label:before {
   width: 0.4rem;
   height: 0.4rem;
@@ -175,6 +183,8 @@ a {
   border-radius: 3px;
   padding: 0.8rem 1.2rem;
   cursor: pointer;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
 }
 
 .btn__icon {
@@ -185,6 +195,12 @@ a {
 
 .btn__text {
   vertical-align: middle;
+}
+
+.btn:hover {
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+  border-color: #134187;
 }
 
 .btn--teal {
@@ -307,6 +323,10 @@ a {
   border-bottom: 2px solid #083d8c;
   -webkit-transition: border-color 0.2s;
   transition: border-color 0.2s;
+}
+
+.primary-nav__mobile-btn {
+  display: none;
 }
 
 .water-background {
@@ -470,6 +490,10 @@ a {
 
 .dealer__certification-col:last-child {
   margin-left: 2rem;
+}
+
+.dealer__certification {
+  margin: 0.4rem 0;
 }
 
 .dealer__certification-icon {
@@ -715,6 +739,24 @@ a {
   }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 

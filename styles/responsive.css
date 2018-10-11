@@ -14,4 +14,59 @@
     margin-left: 0;
   }
 }
+
+@media screen and (max-width: 575.98px) {
+  .xs-hide {
+    display: none;
+  }
+  .btn__icon {
+    margin-right: 0;
+  }
+  .nav-top {
+    display: none;
+  }
+  .primary-nav__logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 35%;
+            flex: 0 0 35%;
+  }
+  .primary-nav__logo-img {
+    width: 100%;
+    height: auto;
+  }
+  .primary-nav__nav-block {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 65%;
+            flex: 0 0 65%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .primary-nav__find-pro-btn {
+    padding: 0.5rem 0.3rem;
+    display: inline-block;
+  }
+  .primary-nav__nav-list {
+    display: none;
+  }
+  .primary-nav__mobile-btn {
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+  .primary-nav__mobile-menu-icon {
+    width: 2rem;
+  }
+  .dealer {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+}
 /*# sourceMappingURL=responsive.css.map */

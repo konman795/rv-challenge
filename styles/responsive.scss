@@ -1,6 +1,4 @@
-$break-large: 1920px;
-
-@media screen and (min-width: $break-large) {
+@media screen and (min-width: 1920px) {
     .dealer {
         flex: 0 0 24.05%;
         &:nth-child(3n), &:nth-child(3n + 1)  {
@@ -12,5 +10,54 @@ $break-large: 1920px;
         &:nth-child(4n + 1) {
             margin-left: 0;
         }
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    .xs-hide {
+        display: none;
+    }
+    .btn {
+        &__icon {
+            margin-right: 0;
+        }
+    }
+    .nav-top {
+        display: none;
+    }
+    .primary-nav {
+        &__logo {
+            flex: 0 0 35%;
+        }
+        &__logo-img {
+            width: 100%;
+            height: auto;
+        }
+        &__nav-block {
+            flex: 0 0 65%;
+            display: flex;
+            align-items: center;
+        }
+        &__find-pro-btn {
+            padding: 0.5rem 0.3rem;
+            display: inline-block;
+        }
+        &__nav-list {
+            display: none;
+        }
+        &__mobile-btn {
+            display: inline-block;
+            background-color: transparent;
+            border: none;
+            padding: 0;
+        }
+        &__mobile-menu-icon {
+            width: 2rem;
+        }
+    }
+    .dealer {
+        flex: 0 0 100%;
+        margin: 0;
+        border-radius: 0;
     }
 }
