@@ -3,6 +3,7 @@ $secondary-blue: #216DDF;
 $aqua: #02C7C6;
 $background-grey: #f6f6f6;
 $divider-grey: #ECECEC;
+$default-font-color: #3F3F3F;
 
 @font-face {
     font-family: OpenSans;
@@ -27,6 +28,12 @@ $divider-grey: #ECECEC;
     src: url(/fonts/open-sans/OpenSans-Italic.ttf);
     font-weight: normal;
     font-style: italic;
+}
+@font-face {
+    font-family: OpenSans;
+    src: url(/fonts/open-sans/OpenSans-Semibold.ttf);
+    font-weight: 500;
+    font-style: normal;
 }
 @font-face {
     font-family: OpenSans;
@@ -244,6 +251,9 @@ a {
         text-align: right;
         display: inline-block;
     }
+    &__mobile-nav-items {
+        display: none;
+    }
     &__nav-item {
         display: inline-block;
         margin: 0 1.7rem;
@@ -293,6 +303,10 @@ a {
     &__label-text {
         margin-right: 2rem;
         font-size: 1.1rem;
+        font-weight: bold;
+    }
+    &__toggle-filters-btn {
+        display: none;
     }
     &__options {
         .custom-checkbox {
@@ -307,7 +321,7 @@ a {
         width: 1.1rem;
         display: inline-block;
         position: relative;
-        top: 0.1rem;
+        top: 0.25rem;
     }
 }
 

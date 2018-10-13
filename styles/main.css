@@ -28,6 +28,13 @@
 
 @font-face {
   font-family: OpenSans;
+  src: url(/fonts/open-sans/OpenSans-Semibold.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans;
   src: url(/fonts/open-sans/OpenSans-SemiboldItalic.ttf);
   font-weight: 500;
   font-style: italic;
@@ -305,6 +312,10 @@ a {
   display: inline-block;
 }
 
+.primary-nav__mobile-nav-items {
+  display: none;
+}
+
 .primary-nav__nav-item {
   display: inline-block;
   margin: 0 1.7rem;
@@ -363,6 +374,11 @@ a {
 .filters__label-text {
   margin-right: 2rem;
   font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.filters__toggle-filters-btn {
+  display: none;
 }
 
 .filters__options .custom-checkbox {
@@ -378,7 +394,7 @@ a {
   width: 1.1rem;
   display: inline-block;
   position: relative;
-  top: 0.1rem;
+  top: 0.25rem;
 }
 
 .dealers {

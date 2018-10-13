@@ -269,3 +269,25 @@ function formValidation() {
         }
     };
 }
+
+(function initiateMobileMenuBtns() {
+    // Bind mobile nav menu button and close menu button
+    const mobileMenuBtn = document.querySelector('.primary-nav__mobile-btn');
+    const mobileMenuCloseBtn = document.querySelector('.primary-nav__mobile-close-menu-btn');
+    const navMenu = document.querySelector('.primary-nav__nav-list');
+
+    mobileMenuBtn.addEventListener('click', function() {
+        navMenu.classList.add('show');
+    });
+    mobileMenuCloseBtn.addEventListener('click', function() {
+        navMenu.classList.remove('show');
+    });
+
+    // Bind filter toggle arrow button
+    const mobileFilterBtn = document.querySelector('.filters__toggle-filters-btn');
+    const filterOptions = document.querySelector('.filters__options');
+
+    mobileFilterBtn.addEventListener('click', function() {
+        filterOptions.classList.toggle('show');
+    });
+})()

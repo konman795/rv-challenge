@@ -40,6 +40,10 @@
                     </div>
                     <div class="primary-nav__nav-block">
                         <ul class="primary-nav__nav-list">
+                            <li class="primary-nav__mobile-nav-items">
+                                <button class="primary-nav__mobile-close-menu-btn" type="button" title="Close Menu">&times;</button>
+                                <span class="primary-nav__mobile-menu-text">Menu</span>
+                            </li>
                             <li class="primary-nav__nav-item">
                                 <a class="primary-nav__link" href="#">Pools & Spas</a>
                             </li>
@@ -79,8 +83,11 @@
                     </strong>
                 </div>
                 <div class="filters__divider"></div>
+                <div class="filters__label">
+                    <span class="filters__label-text">Filter Results</span>
+                    <button class="filters__toggle-filters-btn" type="button">&#x25BE;</span>
+                </div>
                 <section class="filters__options">
-                    <strong><span class="filters__label-text">Filter Results</span></strong>
                     <div class="custom-checkbox">
                         <input class="custom-checkbox__input" id="service" type="checkbox" value="Service Pro">
                         <label class="custom-checkbox__label" for="service">Service</label>
@@ -96,9 +103,9 @@
                     <div class="custom-checkbox">
                         <input class="custom-checkbox__input" id="commercial" type="checkbox" value="Commercial Pro">
                         <label class="custom-checkbox__label" for="commercial">Commercial</label>
+                        <img class="filters__tooltip-icon" title="Find the right PoolPro using these filters." src="images/tool-tip-icon-filtering.png">
                     </div>
                 </section>
-                <img class="filters__tooltip-icon" title="Find the right PoolPro using these filters." src="images/tool-tip-icon-filtering.png">
             </div>
         </div>
         <div id="dealers-container" class="dealers flex flex-wrap container">
