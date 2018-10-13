@@ -226,7 +226,7 @@
     height: 1.25rem;
     margin-top: 0.25rem;
     right: 2rem;
-    background-image: url("/images/next-arrow.png");
+    background-image: url("/app/images/next-arrow.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -371,7 +371,7 @@
     width: 20rem;
   }
   .dealer__telephone-img {
-    background-image: url("/images/phone-icon-mobile.png");
+    background-image: url("/app/images/phone-icon-mobile.png");
     width: 2rem;
     height: 2rem;
   }

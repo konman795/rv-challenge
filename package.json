@@ -1,0 +1,24 @@
+{
+  "name": "rv-challenge",
+  "version": "1.0.0",
+  "description": "Red Ventures project",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-useref": "^3.1.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konman795/rv-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/konman795/rv-challenge/issues"
+  },
+  "homepage": "https://github.com/konman795/rv-challenge#readme"
+}

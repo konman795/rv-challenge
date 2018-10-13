@@ -7,8 +7,8 @@
     <title>Home | PoolPros</title>
     <meta name="description" content="RV Front End Challenge">
     <meta name="author" content="Kon-Kon">
-    <link rel="stylesheet" type="text/css" href="/styles/main.min.css">
-    <link rel="stylesheet" type="text/css" href="/styles/responsive.min.css">
+    <link rel="stylesheet" type="text/css" href="/app/styles/main.min.css">
+    <link rel="stylesheet" type="text/css" href="/app/styles/responsive.min.css">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
                         <li class="nav-top__nav-item">
                             <a class="nav-top__link flex align-items-center" href="#">
                                 <span class="nav-top__link-text">Commercial Service</span>
-                                <img class="nav-top__link-icon" src="/images/action-commercial-icon.png">
+                                <img class="nav-top__link-icon" src="/app/images/action-commercial-icon.png">
                             </a>
                         </li>
                     </ul>
@@ -35,7 +35,7 @@
                 <div class="flex align-items-center justify-content-between">
                     <div class="primary-nav__logo">
                         <a class="primary-nav__logo-link" href="#">
-                            <img class="primary-nav__logo-img" src="/images/pool-pros-logo.png">
+                            <img class="primary-nav__logo-img" src="/app/images/pool-pros-logo.png">
                         </a>
                     </div>
                     <div class="primary-nav__nav-block">
@@ -58,11 +58,11 @@
                             </li>
                         </ul>
                         <button class="primary-nav__find-pro-btn btn" type="button">
-                            <img class="btn__icon" src="/images/location-icon.png">
+                            <img class="btn__icon" src="/app/images/location-icon.png">
                             <span class="btn__text">Find a <span class="sm-hide md-hide">Pool</span> Pro</span>
                         </button>
                         <button class="primary-nav__mobile-btn" type="button">
-                            <img class="primary-nav__mobile-menu-icon" src="/images/menu-icon-mobile.png">
+                            <img class="primary-nav__mobile-menu-icon" src="/app/images/menu-icon-mobile.png">
                         </button>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
         </nav>
     </header>
     <div class="water-background">
-        <img class="water-background__img" src="/images/water-image.png">
+        <img class="water-background__img" src="/app/images/water-image.png">
     </div>
     <main>
         <div class="filters">
@@ -117,7 +117,7 @@
                         src="images/phone-icon-desktop.png"><span class="dealer__telephone-number">1-888-888-8888</span></div>
                 <div class="dealer__email"><em><span class="dealer__email-text">Can't talk now? Click below to send an
                             email.</span></em><button class="dealer__email-btn btn btn--teal" data-company-id="401928"
-                        type="button"><img class="btn__icon" src="/images/email-icon.png"><span class="btn__text">Contact
+                        type="button"><img class="btn__icon" src="/app/images/email-icon.png"><span class="btn__text">Contact
                             this Pro</span></button></div>
                 <div class="dealer__hours"><strong><span>Business Hours</span></strong><span>Weekdays 7:00am - 7:00pm</span><span>Saturdays
                         - CLOSED</span><span>Sundays - On Call</span></div>
@@ -125,21 +125,21 @@
                     <div class="dealer__certifications-list flex flex-wrap">
                         <div class="dealer__certification-col">
                             <div class="dealer__certification">
-                                <img class="dealer__certification-icon" src="/images/star-installation-pro.png">
+                                <img class="dealer__certification-icon" src="/app/images/star-installation-pro.png">
                                 <span class="dealer__certification-text">Installation Pro</span>
                             </div>
                             <div class="dealer__certification">
-                                <img class="dealer__certification-icon" src="/images/gear-service-pro.png">
+                                <img class="dealer__certification-icon" src="/app/images/gear-service-pro.png">
                                 <span class="dealer__certification-text">Service Pro</span>
                             </div>
                         </div>
                         <div class="dealer__certification-col">
                             <div class="dealer__certification">
-                                <img class="dealer__certification-icon" src="/images/home-residential-pro.png">
+                                <img class="dealer__certification-icon" src="/app/images/home-residential-pro.png">
                                 <span class="dealer__certification-text">Residential Pro</span>
                             </div>
                             <div class="dealer__certification">
-                                <img class="dealer__certification-icon" src="/images/users-commercial-pro.png">
+                                <img class="dealer__certification-icon" src="/app/images/users-commercial-pro.png">
                                 <span class="dealer__certification-text">Commercial Pro</span>
                             </div>
                         </div>
@@ -172,7 +172,7 @@
                 <li class="footer__mobile-nav-item">
                     <a class="footer__mobile-link flex align-items-center" href="#">
                         <span class="footer__mobile-link-text">Commercial Service</span>
-                        <img class="footer__mobile-link-icon" src="/images/action-commercial-icon.png">
+                        <img class="footer__mobile-link-icon" src="/app/images/action-commercial-icon.png">
                     </a>
                 </li>
             </ul>
@@ -255,7 +255,7 @@
                         <div class="modal__form-submit-wrapper">
                             <button class="modal__form-submit-btn" type="submit" disabled>
                                 <span class="modal__form-submit-text">Send <span class="sm-hide">my email</span></span>
-                                <img class="modal__form-submit-arrow" src="/images/next-arrow.png">
+                                <img class="modal__form-submit-arrow" src="/app/images/next-arrow.png">
                             </button>
                         </div>
                         <input type="hidden" name="emailRecipient" value="">
@@ -270,8 +270,10 @@
         </section>
     </div>
     <div class="modal-overlay"></div>
+    <!-- build:js scripts/main.min.js -->
     <script type="text/javascript" src="scripts/dealers.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>
+    <!-- endbuild -->
 </body>
 
 </html>
