@@ -85,7 +85,7 @@
                 <div class="filters__divider"></div>
                 <div class="filters__label">
                     <span class="filters__label-text">Filter Results</span>
-                    <button class="filters__toggle-filters-btn" type="button">&#x25BE;</span>
+                    <button class="filters__toggle-filters-btn" type="button">&#x25BE;</button>
                 </div>
                 <section class="filters__options">
                     <div class="custom-checkbox">
@@ -103,7 +103,7 @@
                     <div class="custom-checkbox">
                         <input class="custom-checkbox__input" id="commercial" type="checkbox" value="Commercial Pro">
                         <label class="custom-checkbox__label" for="commercial">Commercial</label>
-                        <img class="filters__tooltip-icon" title="Find the right PoolPro using these filters." src="images/tool-tip-icon-filtering.png">
+                        <img class="filters__tooltip-icon" title="Commercial PoolPro Capable" src="images/tool-tip-icon-filtering.png">
                     </div>
                 </section>
             </div>
@@ -165,6 +165,18 @@
             </div>
         </div>
         <div class="footer__bottom">
+            <ul class="footer__mobile-menu-items">
+                <li class="footer__mobile-nav-item">
+                    <a class="footer__mobile-link" href="#">Dealers and Distributors</a>
+                </li>
+                <li class="footer__mobile-nav-item">
+                    <a class="footer__mobile-link flex align-items-center" href="#">
+                        <span class="footer__mobile-link-text">Commercial Service</span>
+                        <img class="footer__mobile-link-icon" src="/images/action-commercial-icon.png">
+                    </a>
+                </li>
+            </ul>
+            <div class="footer__mobile-divider"></div>
             <ul class="footer__menu">
                 <li class="footer__list-item">
                     <span class="footer__copyright-text">&copy; 2017 Pool Pros</span>
@@ -198,7 +210,7 @@
                             </div>
                             <input class="form-field" type="text" name="fullName" required>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group form-group--40w">
                             <div class="flex align-items-center justify-content-between">
                                 <label class="form-label" for="phoneNumber">Phone number</label>
                                 <div class="form-required"></div>
@@ -222,7 +234,7 @@
                         <div class="form-group">
                             <div class="flex align-items-center justify-content-between">
                                 <label class="form-label">Do you currently own a pool or spa?</label>
-                                <span class="form-optional">optional</span>
+                                <span class="form-optional xs-hide">optional</span>
                             </div>
                             <div class="custom-radio-group">
                                 <div class="custom-radio">
@@ -242,7 +254,7 @@
                         <div class="modal__form-seperator"></div>
                         <div class="modal__form-submit-wrapper">
                             <button class="modal__form-submit-btn" type="submit" disabled>
-                                <span class="modal__form-submit-text">Send my email</span>
+                                <span class="modal__form-submit-text">Send <span class="xs-hide">my email</span></span>
                                 <img class="modal__form-submit-arrow" src="/images/next-arrow.png">
                             </button>
                         </div>

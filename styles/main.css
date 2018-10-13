@@ -219,6 +219,10 @@ a {
   margin-bottom: 1rem;
 }
 
+.form-group--40w {
+  width: 40%;
+}
+
 .form-label {
   font-size: 0.8rem;
   font-weight: bold;
@@ -242,6 +246,7 @@ a {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border: 1px solid #083d8c;
+  outline: none;
 }
 
 .form-required {
@@ -397,6 +402,14 @@ a {
   top: 0.25rem;
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .filters__tooltip-icon {
+    /* IE10+ Position Fix */
+    position: absolute;
+    top: 0;
+  }
+}
+
 .dealers {
   margin-top: 0.9rem;
 }
@@ -444,6 +457,11 @@ a {
 
 .dealer__telephone-img {
   height: 1.6rem;
+  width: 1.6rem;
+  background-image: url("/images/phone-icon-desktop.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   margin-right: 0.8rem;
 }
 
@@ -451,6 +469,7 @@ a {
   font-size: 1.6rem;
   font-weight: 900;
   line-height: 1;
+  color: #3F3F3F;
 }
 
 .dealer__email {
@@ -556,6 +575,10 @@ a {
   background-color: #216DDF;
   text-align: center;
   padding: 0.6rem 0;
+}
+
+.footer__mobile-menu-items {
+  display: none;
 }
 
 .footer__menu {

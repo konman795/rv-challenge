@@ -21,11 +21,11 @@ $default-font-color: #3F3F3F;
 }
 
 @media screen and (max-width: 575.98px) {
-    .container {
-        padding: 0 0.5rem;
-    }
     .xs-hide {
         display: none;
+    }
+    .container {
+        padding: 0 0.5rem;
     }
     .custom-checkbox {
         display: block;
@@ -36,12 +36,59 @@ $default-font-color: #3F3F3F;
             }
         }
     }
+    .custom-radio {
+        position: relative;
+        padding-left: 1.7rem;
+        display: inline-block;
+        margin-right: 0.9rem;
+        &__span {
+            padding: 0;
+            text-align: left;
+            border-radius: 0;
+            border: none;
+            min-width: unset;
+            margin: 0;
+            &:hover {
+                background-color: transparent;
+                border: none;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                left: 0;
+                margin-right: 1rem;
+                background-color: $background-grey;
+                border: 1px solid black;
+                border-radius: 0.15rem;
+                width: 1rem;
+                height: 1rem;
+                transition: all 0.1s;
+            }
+        }
+        &__input:checked ~ &__span {
+            color: $default-font-color;
+            background-color: transparent;
+            border: none;
+        }
+        &__input:checked ~ &__span:before {
+            width: 0.42rem;
+            height: 0.42rem;
+            border: 6px solid $secondary-blue;
+        }
+    }
     .btn {
         &__icon {
             margin-right: 0.1rem;
             height: 1.2rem;
         }
     }
+    .form-group {
+        &--40w {
+            width: 80%;
+        }
+    }
+
     .nav-top {
         display: none;
     }
@@ -229,5 +276,104 @@ $default-font-color: #3F3F3F;
         flex: 0 0 100%;
         margin: 0;
         border-radius: 0;
+        &__divider {
+            display: none;
+        }
+        &__telephone {
+            background-color: $secondary-blue;
+            margin: 0 auto;
+            padding: 0.4rem 0;
+            border-radius: 0.15rem;
+            width: 20rem;
+        }
+        &__telephone-img {
+            background-image: url('/images/phone-icon-mobile.png');
+            width: 2rem;
+            height: 2rem;
+        }
+        &__telephone-number {
+            color: white;
+            font-size: 1.45rem;
+            &:before {
+                content:'Tap to call';
+                font-size: 0.8rem;
+                margin-right: 0.5rem;
+                display: inline;
+                vertical-align: middle;
+            }
+        }
+        &__email-text {
+            font-size: 1rem;
+        }
+
+    }
+    .footer {
+        &__bottom {
+            padding: 1rem 0;
+        }
+        &__mobile-menu-items {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+        &__mobile-nav-item {
+            display: inline-block;
+            font-size: 0.85rem;
+            &:not(:last-child):after {
+                content: '|';
+                color: white;
+            }
+        }
+        &__mobile-link {
+            color: white;
+        }
+        &__mobile-link-icon {
+            height: 0.8rem;
+            margin-left: 0.5rem;
+        }
+        &__mobile-divider {
+            height: 1px;
+            width: 22rem;
+            margin: 1rem auto 0.7rem;
+            background-color: white;
+        }
+        &__list-item:not(:last-child):after {
+            margin: 0 0.2rem;
+        }
+    }
+    .modal {
+        $modal-width: 95vw;
+        $modal-height: 95vh;
+        width: $modal-width;
+        max-height: $modal-height;
+        top: 1rem;
+        left: calc(50% - #{$modal-width}/2);
+        &__instructions {
+            font-size: 0.9rem;
+        }
+        &__form {
+            background-color: transparent;
+            padding: 1rem 0 ;
+        }
+        &__form-seperator {
+            margin-top: 1.75rem;
+        }
+        &__form-submit-wrapper {
+            padding: 1rem 0;
+            text-align: right;
+        }
+        &__form-submit-btn {
+            color: $aqua;
+            &:disabled {
+                color: lightgrey;
+            }
+        }
+        &__form-submit-arrow {
+            display: none;
+        }
+        &__footer {
+            display: none;
+        }
     }
 }

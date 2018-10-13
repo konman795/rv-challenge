@@ -41,9 +41,9 @@ function showResults(dealers) {
         let dealerText = createElement('span', ['dealer__name-text'], dealers[i].data.name);
         let seperatorGrey = createElement('div', ['dealer__divider'], '');
     
-        let dealerTelephone = createElement('div', ['dealer__telephone', 'flex', 'align-items-center', 'justify-content-center'], '');
-        let dealerTelephoneImg = createImgElement(['dealer__telephone-img'], 'images/phone-icon-desktop.png');
-        let dealerTelephoneNumber = createElement('span', ['dealer__telephone-number'], dealers[i].data.phone1);
+        let dealerTelephone = createAnchorElement(['dealer__telephone', 'flex', 'align-items-center', 'justify-content-center'], 'tel:' + dealers[i].data.phone1);
+        let dealerTelephoneImg = createElement('div', ['dealer__telephone-img'], '');
+        let dealerTelephoneNumber = createElement('span', ['dealer__telephone-number'], (dealers[i].data.phone1).replace(/-/g,'.'));
     
         let dealerEmail = createElement('div', ['dealer__email'], '');
         let dealerEmailem = createElement('em', '', '');
@@ -167,6 +167,18 @@ function showResults(dealers) {
             el.dataset.companyId = dataSetValue;
         }
         el.type = 'button';
+        return el;
+    }
+    function createAnchorElement(classNamesArray, hrefText) {
+        let el = document.createElement('a');
+        if (classNamesArray.length > 0) {
+            for (let i = 0; i < classNamesArray.length; i++) {
+                el.classList.add(classNamesArray[i]);
+            }
+        }
+        if (hrefText.length > 0) {
+            el.href = hrefText;
+        }
         return el;
     }
 }
