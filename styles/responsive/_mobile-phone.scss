@@ -1,0 +1,360 @@
+// Mobile Phones
+@media screen and (max-width: 767.98px) {
+    .sm-hide {
+        display: none;
+    }
+    .container {
+        padding: 0 0.5rem;
+    }
+    .custom-checkbox {
+        display: block;
+        &__label {
+            font-size: 1rem;
+            &:before {
+                top: 0.1rem;
+            }
+        }
+    }
+    .custom-radio {
+        position: relative;
+        padding-left: 1.7rem;
+        display: inline-block;
+        margin-right: 0.9rem;
+        &__span {
+            padding: 0;
+            text-align: left;
+            border-radius: 0;
+            border: none;
+            min-width: unset;
+            margin: 0;
+            &:hover {
+                background-color: transparent;
+                border: none;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                left: 0;
+                margin-right: 1rem;
+                background-color: $background-grey;
+                border: 1px solid black;
+                border-radius: 0.15rem;
+                width: 1rem;
+                height: 1rem;
+                transition: all 0.1s;
+            }
+        }
+        &__input:checked ~ &__span {
+            color: $default-font-color;
+            background-color: transparent;
+            border: none;
+        }
+        &__input:checked ~ &__span:before {
+            width: 0.42rem;
+            height: 0.42rem;
+            border: 6px solid $secondary-blue;
+        }
+    }
+    .btn {
+        &__icon {
+            margin-right: 0.1rem;
+            height: 1.2rem;
+        }
+    }
+    .form-group {
+        &--40w {
+            width: 80%;
+        }
+    }
+
+    .nav-top {
+        display: none;
+    }
+    .primary-nav {
+        padding: 0.65rem 0;
+        &__logo {
+            flex: 1 0 40%;
+            padding-right: 1.4rem;
+            box-sizing: border-box;
+        }
+        &__logo-img {
+            height: auto;
+            max-width: 100%;
+            vertical-align: middle;
+        }
+        &__nav-block {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        &__find-pro-btn {
+            padding: 0.4rem 0.6rem 0.5rem 0.4rem;
+            display: inline-block;
+            margin-right: 5rem;
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: -1px;
+            font-size: 0.8rem;
+        }
+        &__nav-list {
+            height: 0;
+            overflow: hidden;
+            position: absolute;
+            width: 100%;
+            margin: 0;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background-color: white;
+            border-top: 0.3rem solid transparent;
+            border-bottom: 0.3rem solid transparent;
+            transition: all 0.5s;
+            &.show {
+                z-index: 100;
+                height: 405px;
+                border-top: 0.3rem solid $aqua;
+                border-bottom: 0.3rem solid $aqua;
+                box-shadow: 0 5px 2px -2px lightgrey;
+            }
+        }
+        &__nav-item {
+            display: block;
+            text-align: left;
+            margin: 0.1rem 0;
+        }
+        &__link {
+            color: $default-font-color;
+            font-weight: 500;
+            font-size: 1.25rem;
+            display: block;
+            background-color: $background-grey;
+            padding: 1.5rem 2rem;
+            &:after {
+                content: "";
+                position: absolute;
+                width: 1.25rem;
+                height: 1.25rem;
+                margin-top: 0.25rem;
+                right: 2rem;
+                background-image: url('/images/next-arrow.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+        &__mobile-btn {
+            display: inline-block;
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            position: absolute;
+            top: 0.2rem;
+            &:focus {
+                outline: none;
+            }
+        }
+        &__mobile-menu-icon {
+            width: 4rem;
+            top: 0;
+        }
+        &__mobile-nav-items {
+            display: block;
+            text-align: center;
+            padding: 2rem 0 1.75rem;
+        }
+        &__mobile-close-menu-btn {
+            position: absolute;
+            top: 0.5rem;
+            padding: 0;
+            right: 2rem;
+            background-color: transparent;
+            border: none;
+            color: $aqua;
+            font-weight: 500;
+            font-size: 2.5rem;
+            &:focus {
+                outline: none;
+            }
+        }
+        &__mobile-menu-text {
+            text-transform: uppercase;
+            color: $primary-blue;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+    }
+    
+    .water-background {
+        background-size: cover;
+        height: 40vw;
+        top: 3rem;
+    }
+    .filters {
+        margin: 7rem 0 0;
+        padding: 1rem;
+        border-radius: 0;
+        border-bottom: 1px solid lightgrey;
+        .flex {
+            flex-wrap: wrap;
+        }
+        .custom-checkbox {
+            margin: 1.25rem 0;
+        }
+        &__dealer-stats {
+            flex: 0 0 auto;
+            font-size: 1rem;
+        }
+        &__divider {
+            display: none;
+        }
+        &__label {
+            padding-left: 0.75rem;
+            flex: 1 0 50%;
+            display: flex;
+            z-index: 10;
+        }
+        &__label-text {
+            background-color: white;
+            padding: 0.75rem 0.75rem;
+            border: 1px solid lightgrey;
+            margin: 0;
+            flex: 1 0 auto;
+        }
+        &__toggle-filters-btn {
+            display: block;
+            background-color: transparent;
+            padding: 0;
+            font-size: 1.5rem;
+            border: 1px solid lightgrey;
+            border-left: none;
+            flex: 0 0 3rem;
+            &:focus {
+                outline: none;
+            }
+        }
+        &__options {
+            height: 0;
+            margin-top: -1px;
+            overflow: hidden;
+            box-sizing: border-box;
+            padding: 0rem 1.5rem;
+            flex: 0 0 100%;
+            background-color: white;
+            border: 1px solid $background-grey;
+            transition: height 0.5s, border-color 0.5s;
+            &.show {
+                border-color: lightgrey;
+                height: 190px;
+            }
+        }
+    }
+    .dealers {
+        padding: 0 1rem;
+    }
+    .dealer {
+        flex: 0 0 100%;
+        margin: 0;
+        border-radius: 0;
+        &__divider {
+            display: none;
+        }
+        &__telephone {
+            background-color: $secondary-blue;
+            margin: 0 auto;
+            padding: 0.4rem 0;
+            border-radius: 0.15rem;
+            width: 20rem;
+        }
+        &__telephone-img {
+            background-image: url('/images/phone-icon-mobile.png');
+            width: 2rem;
+            height: 2rem;
+        }
+        &__telephone-number {
+            color: white;
+            font-size: 1.45rem;
+            &:before {
+                content:'Tap to call';
+                font-size: 0.8rem;
+                margin-right: 0.5rem;
+                display: inline;
+                vertical-align: middle;
+            }
+        }
+        &__email-text {
+            font-size: 1rem;
+        }
+
+    }
+    .footer {
+        &__bottom {
+            padding: 1rem 0;
+        }
+        &__mobile-menu-items {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+        &__mobile-nav-item {
+            display: inline-block;
+            font-size: 0.85rem;
+            &:not(:last-child):after {
+                content: '|';
+                color: white;
+            }
+        }
+        &__mobile-link {
+            color: white;
+        }
+        &__mobile-link-icon {
+            height: 0.8rem;
+            margin-left: 0.5rem;
+        }
+        &__mobile-divider {
+            height: 1px;
+            width: 22rem;
+            margin: 1rem auto 0.7rem;
+            background-color: white;
+        }
+        &__list-item:not(:last-child):after {
+            margin: 0 0.2rem;
+        }
+    }
+    .modal {
+        $modal-width: 95vw;
+        $modal-height: 95vh;
+        width: $modal-width;
+        max-height: $modal-height;
+        top: 1rem;
+        left: calc(50% - #{$modal-width}/2);
+        &__instructions {
+            font-size: 0.9rem;
+        }
+        &__form {
+            background-color: transparent;
+            padding: 1rem 0 ;
+        }
+        &__form-seperator {
+            margin-top: 1.75rem;
+        }
+        &__form-submit-wrapper {
+            padding: 1rem 0;
+            text-align: right;
+        }
+        &__form-submit-btn {
+            color: $aqua;
+            &:disabled {
+                color: lightgrey;
+            }
+        }
+        &__form-submit-arrow {
+            display: none;
+        }
+        &__footer {
+            display: none;
+        }
+    }
+}

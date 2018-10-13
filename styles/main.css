@@ -240,6 +240,7 @@ a {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: OpenSans;
 }
 
 .form-field:focus, .form-field:active, .form-field:hover {

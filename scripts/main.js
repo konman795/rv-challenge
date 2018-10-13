@@ -274,12 +274,21 @@ function formValidation() {
             function(field) {
                 return field.parentElement.classList.contains('valid');
             })) {
+            formSubmission();
             formSubmitBtn.disabled = false;
         }
         else {
             formSubmitBtn.disabled = true;
         }
     };
+
+    function formSubmission() {
+        const contactForm = document.querySelector('#pool-pro-contact-form');
+
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+        });
+    }
 }
 
 (function initiateMobileMenuBtns() {
