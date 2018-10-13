@@ -1,41 +1,41 @@
 @font-face {
   font-family: OpenSans;
-  src: url(/app/fonts/open-sans/OpenSans-Regular.ttf);
+  src: url(../fonts/open-sans/OpenSans-Regular.ttf);
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: OpenSans;
-  src: url(/app/fonts/open-sans/OpenSans-Bold.ttf);
+  src: url(../fonts/open-sans/OpenSans-Bold.ttf);
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: OpenSans;
-  src: url(/app/fonts/open-sans/OpenSans-ExtraBold.ttf);
+  src: url(../fonts/open-sans/OpenSans-ExtraBold.ttf);
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: OpenSans;
-  src: url(/app/fonts/open-sans/OpenSans-Italic.ttf);
+  src: url(../fonts/open-sans/OpenSans-Italic.ttf);
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: OpenSans;
-  src: url(/app/fonts/open-sans/OpenSans-Semibold.ttf);
+  src: url(../fonts/open-sans/OpenSans-Semibold.ttf);
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: OpenSans;
-  src: url(/app/fonts/open-sans/OpenSans-SemiboldItalic.ttf);
+  src: url(../fonts/open-sans/OpenSans-SemiboldItalic.ttf);
   font-weight: 500;
   font-style: italic;
 }
@@ -51,6 +51,7 @@ body {
 main {
   display: block;
   padding-bottom: 4rem;
+  min-height: calc(100vh - 9.1vw - 388px);
 }
 
 a {
@@ -240,7 +241,7 @@ a {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: OpenSans;
+  font-family: OpenSans, Arial, Helvetica, Sans-Serif;
 }
 
 .form-field:focus, .form-field:active, .form-field:hover {
@@ -253,13 +254,13 @@ a {
 .form-required {
   width: 1.1rem;
   height: 1.1rem;
-  background-image: url("/app/images/circle-form.png");
+  background-image: url("../images/circle-form.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .form-group.valid .form-required {
-  background-image: url("/app/images/checkmark-circle.png");
+  background-image: url("../images/checkmark-circle.png");
 }
 
 .form-optional {
@@ -293,6 +294,7 @@ a {
 .nav-top__link {
   color: white;
   font-size: 0.8rem;
+  line-height: 2;
 }
 
 .nav-top__link-icon {
@@ -350,7 +352,7 @@ a {
   z-index: -1;
   position: absolute;
   width: 100%;
-  background-image: url("/app/images/water-image.png");
+  background-image: url("../images/water-image.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -465,7 +467,7 @@ a {
 .dealer__telephone-img {
   height: 1.6rem;
   width: 1.6rem;
-  background-image: url("/app/images/phone-icon-desktop.png");
+  background-image: url("../images/phone-icon-desktop.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

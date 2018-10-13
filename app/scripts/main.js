@@ -49,7 +49,7 @@ function showResults(dealers) {
         let dealerEmailem = createElement('em', '', '');
         let dealerEmailText = createElement('span', ['dealer__email-text'], "Can't talk now? Click below to send an email.");
         let dealerEmailBtn = createBtnElement(['dealer__email-btn', 'btn', 'btn--teal'], dealers[i].data.companyID);
-        let dealerEmailIcon = createImgElement(['btn__icon'], '/app/images/email-icon.png');
+        let dealerEmailIcon = createImgElement(['btn__icon'], 'images/email-icon.png');
         let dealerEmailBtnText = createElement('span', ['btn__text'], 'Contact this Pro');
     
         let dealerHours = createElement('div', ['dealer__hours'], '');
@@ -68,16 +68,16 @@ function showResults(dealers) {
             var certIconpath = '';
             switch(dealers[i].data.certifications[j]) {
                 case 'Installation Pro':
-                    certIconpath = '/app/images/star-installation-pro.png'
+                    certIconpath = 'images/star-installation-pro.png'
                     break;
                 case 'Commercial Pro':
-                    certIconpath = '/app/images/users-commercial-pro.png'
+                    certIconpath = 'images/users-commercial-pro.png'
                     break;
                 case 'Residential Pro':
-                    certIconpath = '/app/images/home-residential-pro.png'
+                    certIconpath = 'images/home-residential-pro.png'
                     break;
                 case 'Service Pro':
-                    certIconpath = '/app/images/gear-service-pro.png'
+                    certIconpath = 'images/gear-service-pro.png'
                     break;
             }
             let certification = createElement('div', ['dealer__certification'], '');

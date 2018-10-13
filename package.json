@@ -1,0 +1,26 @@
+{
+  "name": "rv-challenge",
+  "version": "1.0.0",
+  "description": "RV Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konman795/rv-challenge.git"
+  },
+  "author": "Kon-Kon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/konman795/rv-challenge/issues"
+  },
+  "homepage": "https://github.com/konman795/rv-challenge#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-uglify-es": "^1.0.4",
+    "gulp-useref": "^3.1.5"
+  }
+}

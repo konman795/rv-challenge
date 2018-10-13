@@ -8,6 +8,7 @@ body {
 main {
     display: block;
     padding-bottom: 4rem;
+    min-height: calc(100vh - 9.1vw - 388px);
 }
 a {
     text-decoration: none;
@@ -148,7 +149,7 @@ a {
     transition: all 0.2s;
     width: 100%;
     box-sizing: border-box;
-    font-family: OpenSans;
+    font-family: OpenSans, Arial, Helvetica, Sans-Serif;
     &:focus, &:active, &:hover {
         transition: all 0.2s;
         border: 1px solid $primary-blue;
@@ -158,13 +159,13 @@ a {
 .form-required {
     width: 1.1rem;
     height: 1.1rem;
-    background-image: url('/app/images/circle-form.png');
+    background-image: url('../images/circle-form.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
 .form-group.valid {
     .form-required {
-        background-image: url('/app/images/checkmark-circle.png');
+        background-image: url('../images/checkmark-circle.png');
     }
 }
 .form-optional {
