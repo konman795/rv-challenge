@@ -5,6 +5,7 @@ $background-grey: #f6f6f6;
 $divider-grey: #ECECEC;
 $default-font-color: #3F3F3F;
 
+// Screen sizes 1920 width and higher
 @media screen and (min-width: 1920px) {
     .dealer {
         flex: 0 0 24.05%;
@@ -20,8 +21,71 @@ $default-font-color: #3F3F3F;
     }
 }
 
-@media screen and (max-width: 575.98px) {
-    .xs-hide {
+// Tablets
+@media (min-width: 768px) and (max-width: 1024px) {
+    .md-hide {
+        display: none;
+    }
+    .container {
+        padding: 0 1rem;
+    }
+    .nav-top {
+        &__nav-item {
+            margin: 0 1rem;
+        }
+    }
+    .primary-nav {
+        &__logo-img {
+            height: 1.6rem;
+        }
+        &__nav-list {
+            margin: 0;
+        }
+        &__nav-item {
+            margin: 0 0.4rem;
+        }
+        &__find-pro-btn {
+            padding: 0.8rem 0.7rem;
+            .btn__icon {
+                margin-right: 0.2rem;
+            }
+        }
+    }
+    .filters {
+        margin: 9.1vw 1rem 0;
+        .flex {
+            flex-wrap: wrap;
+        }
+        &__dealer-stats {
+            text-align: center;
+            flex: 0 0 100%;
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid $divider-grey;
+        }
+        &__divider {
+            display: none;
+        }
+
+    }
+    .dealer {
+        flex: 0 0 48.9%;
+        margin: 1rem 0.5rem;
+        &:nth-child(3n), &:nth-child(3n + 1)  {
+            margin: 1rem 0.5rem;
+        }
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+        &:nth-child(2n+1) {
+            margin-left: 0;
+        }
+    }
+}
+
+// Mobile Phones
+@media screen and (max-width: 767.98px) {
+    .sm-hide {
         display: none;
     }
     .container {
@@ -208,10 +272,12 @@ $default-font-color: #3F3F3F;
     }
     
     .water-background {
-        margin-top: 1rem;
+        background-size: cover;
+        height: 40vw;
+        top: 3rem;
     }
     .filters {
-        margin: 6rem 0 0;
+        margin: 7rem 0 0;
         padding: 1rem;
         border-radius: 0;
         border-bottom: 1px solid lightgrey;

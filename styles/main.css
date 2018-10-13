@@ -349,11 +349,17 @@ a {
   z-index: -1;
   position: absolute;
   width: 100%;
+  background-image: url("/images/water-image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 14vw;
 }
 
 .water-background__img {
   width: 100%;
   height: auto;
+  display: none;
 }
 
 .filters {
